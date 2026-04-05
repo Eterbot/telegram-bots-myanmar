@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: telegram-bots-myanmar
+    runtime: docker
+    region: oregon
+    plan: starter
+    healthCheckPath: /
+    envVars:
+      - key: GROUP_BOT_TOKEN
+        scope: run
+      - key: AI_BOT_TOKEN
+        scope: run
+      - key: OPENAI_API_KEY
+        scope: run
